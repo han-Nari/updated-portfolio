@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portpolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="overlay" class="overlay" onclick="removeNav()"></div>
+    <div onclick="closeOverLay2()" class="overlay2"></div>
+    <header>
+      <div class="wrapper nav">
+        <div class="logo">
+          <h3>F<span class="aqua">A</span></h3>
+          <button
+            onclick="openNav()"
+            class="menu-bar"
+            id="menu"
+            aria-label="Open Nav"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="30px"
+              viewBox="0 -960 960 960"
+              width="30px"
+              fill="#ffffff"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav id="show">
+          <ul>
+            <li>
+              <a class="active" href="#home"> Home </a>
+            </li>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#project">Project</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div id="home" class="wrapper main">
+        <img src="assets/lek.jpg" alt="my-image" class="lek" />
+        <p>Hello There - I'm Felix, and this is my work.</p>
+        <h1>Aspiring Web Designer & Front-End Developer</h1>
+        <p>
+          I'm an aspiring UI/UX designer and front-end developer. I'm learning
+          to create intuitive, user-centered interfaces and bring them to life
+          with clean, responsive code.
+        </p>
+        <a
+          class="download-cv"
+          aria-label="Download Curriculum Vitae as PDF"
+          href="assets/Felix.pdf"
+          download
+        >
+          Download CV
+        </a>
+      </div>
+    </main>
+
+    <section>
+      <div class="wrapper st">
+        <div id="skills" class="title-section">
+          <img src="assets/skills.png" alt="skills" class="tools" />
+        </div>
+        <div class="skills">
+          <div class="card-one">
+            <div class="cols">
+              <h2>
+                <span class="green"></span>
+                <span class="title">Languages</span>
+              </h2>
+              <div class="cards">
+                <img class="icon" src="assets/html.svg" alt="html" />
+                <span class="lang">HTML</span>
+              </div>
+              <div class="cards">
+                <img class="icon" src="assets/css.svg" alt="css" />
+                <span class="lang">Css</span>
+              </div>
+              <div class="cards">
+                <img class="icon" src="assets/js.svg" alt="js" />
+                <span class="lang">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="cols">
+              <h2>
+                <span class="green"></span>
+                <span class="title">Tools</span>
+              </h2>
+              <div class="cards">
+                <img class="icon" src="assets/github.svg" alt="github" />
+                <span class="lang">Github</span>
+              </div>
+              <div class="cards">
+                <img class="icon" src="assets/git.svg" alt="git" />
+                <span class="lang">Gitbash</span>
+              </div>
+              <div class="cards">
+                <img class="icon" src="assets/vs.svg" alt="vs" />
+                <span class="lang">JavaScript</span>
+              </div>
+              <div class="cards">
+                <img class="icon" src="assets/figma.svg" alt="figma" />
+                <span class="lang">Figma</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-two">
+            <div class="card-one progress progress-height">
+              <div class="cols col-two">
+                <h2>
+                  <span class="green"></span>
+                  <span class="title">Skills</span>
+                </h2>
+                <div class="progress-card">
+                  <div class="progress-cards w-full">
+                    <img class="icon" src="assets/flexbox.png" alt="flex" />
+                    <span class="text">Flexbox</span>
+                  </div>
+                  <div class="progress-cards w-full">
+                    <img class="icon" src="assets/grid.png" alt="grid" />
+                    <span class="text">Grid</span>
+                  </div>
+
+                  <div class="progress-cards w-full">
+                    <img class="icon" src="assets/typo.png" alt="typography" />
+                    <span class="text">Typography</span>
+                  </div>
+                  <div class="progress-cards w-full">
+                    <img class="icon" src="assets/media.png" alt="mediaq" />
+                    <span class="text">MediaQuery</span>
+                  </div>
+
+                  <div class="progress-cards w-full">
+                    <img
+                      class="icon"
+                      src="assets/rd.png"
+                      alt="responsive design"
+                    />
+                    <span class="text">Mobile-first Design</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-one progress">
+              <div class="cols col-two">
+                <h2>
+                  <span class="green aq"></span>
+                  <span class="title">In progress</span>
+                </h2>
+                <div class="progress-card">
+                  <div class="progress-cards">
+                    <img class="icon" src="assets/reactjs.png" alt="react" />
+                    <span class="text">React Js</span>
+                  </div>
+                  <div class="progress-cards">
+                    <img
+                      class="icon"
+                      src="assets/tailwind.png"
+                      alt="tailwind css"
+                    />
+                    <span class="text">Tailwind Css</span>
+                  </div>
+
+                  <div class="progress-cards">
+                    <img class="icon" src="assets/designing.png" alt="design" />
+                    <span class="text">Designing</span>
+                  </div>
+                  <div class="progress-cards">
+                    <img
+                      class="icon"
+                      src="assets/prototype.png"
+                      alt="prototype"
+                    />
+                    <span class="text">Prototyping</span>
+                  </div>
+
+                  <div class="progress-cards">
+                    <img class="icon" src="assets/wire.png" alt="wireframing" />
+                    <span class="text">Wireframing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="what">
+      <div class="wrapper">
+        <div id="can" class="title-section">
+          <img src="assets/canDo.png" alt="skills" class="tools" />
+        </div>
+
+        <div class="box">
+          <div class="boxes">
+            <img src="assets/clock.png" alt="clock" />
+            <h3>Flexible Working Hours</h3>
+            <p>
+              I'm available across different time zones and can adjust my
+              schedule to meet deadlines or team needs.
+            </p>
+          </div>
+          <div class="boxes">
+            <img src="assets/arrow.png" alt="arrow" />
+            <h3>Design-Driven Developer</h3>
+            <p>
+              With a UI/UX mindset, I care about layout, spacing, typography,
+              and component consistency — not just code.
+            </p>
+          </div>
+          <div class="boxes">
+            <img src="assets/rocket.png" alt="rocket" />
+            <h3>Always Improving</h3>
+            <p>
+              I constantly learn new tools (like Tailwind, Figma prototyping,
+              and design systems) to deliver better results.
+            </p>
+          </div>
+          <div class="boxes">
+            <img src="assets/check.png" alt="rocket" />
+            <h3>Always Improving</h3>
+            <p>
+              I constantly learn new tools (like Tailwind, Figma prototyping,
+              and design systems) to deliver better results.
+            </p>
+          </div>
+          <div class="boxes">
+            <img src="assets/hand.png" alt="rocket" />
+            <h3>Always Improving</h3>
+            <p>
+              I constantly learn new tools (like Tailwind, Figma prototyping,
+              and design systems) to deliver better results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrapper">
+        <div id="project" class="title-section">
+          <img src="assets/myproject.png" alt="skills" class="tools" />
+        </div>
+        <div class="project-card">
+          <!-- Card number 1 -->
+          <div class="project-lists">
+            <img src="assets/challenge02.png" alt="Front-end Challenge 02" />
+            <div class="project-text">
+              <p class="project-number">01</p>
+              <h3 class="project-title">Browser extension manager UI</h3>
+              <button
+                aria-label="View project: Challenge02"
+                onclick="showDetails('assets/challenge02.png', 'challenge02')"
+                class="project-view"
+              >
+                View Project
+              </button>
+            </div>
+          </div>
+          <!-- Card number 2 -->
+          <div class="project-lists">
+            <img src="assets/challenge01.png" alt="Front-end Challenge 02" />
+            <div class="project-text">
+              <p class="project-number">02</p>
+              <h3 class="project-title">Fylo dark theme landing page</h3>
+              <button
+                aria-label="View project: Challenge02"
+                onclick="showDetails('assets/challenge01.png', 'challenge01')"
+                class="project-view"
+              >
+                View Project
+              </button>
+            </div>
+          </div>
+          <!-- Card number 3 -->
+          <div class="project-lists">
+            <img src="assets/challenge03.png" alt="Front-end Challenge 02" />
+            <div class="project-text">
+              <p class="project-number">03</p>
+              <h3 class="project-title">Product list with cart</h3>
+              <button
+                aria-label="View project: Challenge02"
+                onclick="showDetails('assets/challenge03.png', 'challenge03')"
+                class="project-view"
+              >
+                View Project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card Details -->
+    <section class="wrapper">
+      <div role="dialog" class="project-details">
+        <button
+          onclick="closeDetails()"
+          class="close"
+          aria-label="Close details"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="30px"
+            viewBox="0 -960 960 960"
+            width="30px"
+            fill="#ffffff"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+        </button>
+        <img class="project-img" id="imgDetail" alt="details " />
+
+        <div class="text-details">
+          <h2 class="project-name"></h2>
+          <p class="language"></p>
+          <p class="myinfo"></p>
+          <a target="_blank" class="ch1" href="">Front-end Mentor Link</a>
+          <div class="project-links">
+            <a target="_blank" class="project-live" href="">Live View</a>
+            <a target="_blank" class="project-source" href="">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrapper design">
+        <div id="design" class="title-section">
+          <img src="assets/design.png" alt="skills" class="tools" />
+        </div>
+        <div class="figma-embed">
+          <iframe
+            src="https://embed.figma.com/design/ixIUqpkYcxFOqbH74gxLoG/Portfolio?node-id=0-1&embed-host=share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <details class="typography-details">
+          <pre>
+            Font Family: Roboto, sans-serif  
+            Font Weights Used: 200 (thin), 400 (regular), 600 (semibold), 700 (bold) 
+             
+            Font Sizes:
+            - Extra Small: clamp(0.75rem, 1.5vw, 0.875rem) — Buttons
+            - Small: clamp(0.875rem, 2vw, 1rem) — Links, captions
+            - Medium: clamp(1rem, 2.5vw, 1.25rem) — Body text
+            - Extra Extra Large: clamp(2.5rem, 8vw, 3.5rem) — Main headings
+
+            Text Colors:
+            - Base: #ffffff
+            - Primary Accent: #1cbcc7
+            - Button Text (Dark): #000000
+
+            Note:
+              Changes have been made to the design, such as updates to fonts, colors, font-sizes and font weights.
+          </pre>
+        </details>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper footer">
+        <h2 id="contact">My Contact Details</h2>
+        <div class="footer-flex">
+          <p>🇵🇭 📱 +63 927-827-0557</p>
+          <p>📧 Email: abungan082198@gmail.com</p>
+          <p>📍 18 P. Gregorio St., Brgy. Lingunan, Valenzuela City</p>
+        </div>
+
+        <div class="footer-center">
+          <p>💼 Indeed | 🐱 GitHub | 💬 Messenger | 📘 Facebook</p>
+          <p>
+            © 2025 Felix — Front-End Developer | Built with HTML, CSS,
+            JavaScript & Figma
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
