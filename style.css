@@ -60,6 +60,7 @@
     display: grid;
     gap: 5rem;
     padding-top: 7em;
+    height: auto;
   }
 
   h1,
@@ -251,104 +252,86 @@
   /* Skills and Tools */
 
   .skills {
-    display: flex;
-    gap: 0.5rem;
+    display: grid;
+    padding: 1em;
+    justify-content: center;
     background-color: var(--clr-card-bg);
     border-radius: 10px;
-    padding: 1em;
-    @media (min-width: 500px) {
-      justify-content: center;
-      gap: 1rem;
-    }
+    grid-template-areas:
+      "top top"
+      "bottom bottom";
   }
+
   .card-one {
-    width: 180px;
-    @media (min-width: 800px) {
-      width: 220px;
-    }
+    grid-area: top;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .card-one > * {
+    flex: 1 1 auto;
+  }
+
+  .card-two {
+    grid-area: bottom;
+  }
+
+  .skills > * .icon {
+    width: 35px;
+  }
+
+  .cards {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   .cols {
-    display: grid;
-    gap: 1.5rem;
     padding: 1em;
+    display: grid;
+    gap: 1rem;
   }
 
   .cols h2 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    height: 10px;
+    padding-block: 1em;
     font-size: var(--font-size-md);
   }
 
-  .cols h2 .green {
-    width: 10px;
-    aspect-ratio: 1 / 1;
-    background-color: var(--clr-green);
-    border-radius: 100%;
-    display: block;
+  .cols .text {
+    font-size: var(--font-size-xs);
   }
 
-  .cols h2 .aq {
+  .green {
+    display: block;
+    width: 12px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    background-color: var(--clr-green);
+  }
+
+  .aq {
     background-color: var(--clr-primary);
   }
 
-  .cards {
-    width: 35px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: var(--font-size-xs);
-  }
-
-  /* Progress */
-  .progress {
-    height: 30vh;
-    align-self: center;
-    width: 250px;
-
-    @media (min-width: 800px) {
-      width: 300px;
+  @media (min-width: 1000px) {
+    .skills {
+      gap: 2rem;
+      grid-template-areas:
+        "top right"
+        "top right";
     }
-  }
 
-  .progress-height {
-    @media (min-width: 800px) {
-      height: 45vh;
-      width: 250px;
+    .card-one {
+      grid-area: top;
+      gap: 2rem;
     }
-  }
 
-  .progress-card {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 1rem;
-  }
-
-  .progress-cards {
-    display: flex;
-    align-items: center;
-    font-size: var(--font-size-xs);
-    width: 50%;
-    gap: 0.5rem;
-  }
-
-  .progress-cards img {
-    width: 35px;
-  }
-
-  .progress-card-one {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .card-two {
-    display: grid;
-    gap: 1rem;
-    place-content: center;
-
-    @media (min-width: 800px) {
-      display: flex;
+    .card-two {
+      grid-area: right;
     }
   }
 
