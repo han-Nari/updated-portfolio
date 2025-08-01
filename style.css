@@ -173,7 +173,7 @@
   }
 
   .social-media img:hover {
-    transform: rotate(-360deg) translateY(-20%);
+    transform: rotate(-30deg) translateY(-30%);
     transition: 0.3s ease-in-out;
   }
 
