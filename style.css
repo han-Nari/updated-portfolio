@@ -230,7 +230,7 @@
   /* Main */
   .main {
     display: grid;
-    gap: 1.6rem;
+    gap: 1rem;
   }
 
   .main > p {
@@ -262,6 +262,10 @@
   .lek {
     border-radius: 100%;
     width: 70px;
+
+    @media (min-width: 800px) {
+      display: none;
+    }
   }
 
   /* Skills and Tools */
