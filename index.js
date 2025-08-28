@@ -34,6 +34,15 @@ const challengeLinks = {
     link: "https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d",
     details: `A responsive product list page built with React, featuring a fully functional shopping cart. Users can browse products, add or remove items from the cart, and view the total cost dynamically. The project emphasizes clean UI, modular component structure, and state management using React hooks. Styled with CSS for a smooth user experience across devices.`,
   },
+  challenge04: {
+    name: "Event Hub",
+    live: "https://han-nari.github.io/event-hub/",
+    language: `
+     <img class="lang" src="assets/html.svg" alt="html"/>  <img class="lang" src="assets/reactjs.svg" alt="html"/> <img class="lang" src="assets/tailwind.png" alt="img"  />`,
+    source: "https://github.com/han-Nari/event-hub",
+    link: "",
+    details: `Event Hub is where ideas turn into events 🚀. Create your own gatherings, discover activities by category, and find exactly what you need with a smart search feature. Powered by React and modern routing, Event Hub makes connecting through events effortless and fun.`,
+  },
 };
 
 nav.forEach((item) => {
