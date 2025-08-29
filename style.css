@@ -366,10 +366,13 @@
 
   .project-text {
     display: grid;
-    grid-template-rows: 120px;
     gap: 3rem;
     padding: 1em;
     overflow: hidden;
+
+    @media (min-width: 800px) {
+      grid-template-rows: 120px;
+    }
   }
 
   .project-number {
