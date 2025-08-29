@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,385;1,385&family=Pacifico&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&display=swap");
 
 @layer reset, token, base, components, utilities, overrides;
 
@@ -19,8 +20,9 @@
     /** Base colors */
     --clr-primary: #1cbcc7;
     --clr-body-color: #18181b;
-    --clr-light-a0: #ffffff;
+    --clr-light-a0: #d1cbcb;
     --clr-dark-a0: #000000;
+    --clr-white: #ffffff;
 
     /* Border Style */
     --clr-border: #767676;
@@ -38,9 +40,11 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
+    --font-family-title: "Libertinus Keyboard", system-ui;
+
     /* Font size  */
     --font-size-xs: clamp(0.75rem, 1.5vw, 0.875rem); /* Extra Small */
-    --font-size-sm: clamp(0.875rem, 2vw, 1rem); /* Small */
+    --font-size-sm: clamp(0.9rem, 3vw, 1rem); /* Small */
     --font-size-md: clamp(1rem, 2.5vw, 1.25rem); /* Medium (base text) */
     --font-size-lg: clamp(1.25rem, 4vw, 1.75rem); /* Large */
     --font-size-xl: clamp(1.75rem, 6vw, 2.5rem); /* Extra Large */
@@ -58,9 +62,6 @@
     background-color: var(--clr-body-color);
     position: relative;
     display: grid;
-    gap: 5rem;
-    padding-top: 7em;
-    height: auto;
   }
 
   h1,
@@ -91,19 +92,20 @@
   }
 
   header {
-    position: fixed;
-    top: 0;
     padding-block: 2em;
-    width: 100%;
-    z-index: 999;
-    background-color: var(--clr-body-color);
+    @media (max-width: 800px) {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      background-color: var(--clr-body-color);
+    }
   }
 
   .title-section {
-    display: grid;
-    place-content: center;
-    text-align: center;
-    padding-bottom: 5em;
+    border-bottom: 1px solid var(--clr-border);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-regular);
   }
 
   .lang {
@@ -117,6 +119,12 @@
   .icon:hover {
     transform: scale(1.1);
     cursor: pointer;
+  }
+
+  .my-icons,
+  .project-card,
+  .about {
+    padding-block: 2em;
   }
 
   @media (min-width: 800px) {
@@ -186,7 +194,6 @@
 
   /* Footer */
   footer {
-    border-top: 1px solid var(--clr-border);
     padding-block: 2em;
   }
 
@@ -199,7 +206,7 @@
 @layer components {
   /* Width Style */
   .wrapper {
-    width: min(1000px, 90%);
+    width: min(750px, 80%);
     margin-inline: auto;
   }
 
@@ -229,7 +236,9 @@
 
   /* Main */
   .main {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
 
@@ -247,7 +256,7 @@
   .download-cv {
     background-color: var(--clr-light-a0);
     color: var(--clr-dark-a0);
-    padding: 1em 1.5em;
+    padding: 0.8em 1.5em;
     font-weight: var(--font-weight-semibold);
     font-size: var(--font-size-xs);
     width: fit-content;
@@ -255,329 +264,123 @@
   }
 
   .download-cv:hover {
-    background-color: var(--clr-primary);
+    background-color: var(--clr-card-bg);
     color: var(--clr-light-a0);
+    border: 1px solid var(--clr-light-a0);
   }
 
   .lek {
     border-radius: 100%;
-    width: 70px;
+    width: 150px;
+    padding: 0.5em;
+    background-color: var(--clr-card-bg);
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 
     @media (min-width: 800px) {
-      display: none;
+      width: 300px;
     }
   }
 
   /* Skills and Tools */
+  .my-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 
-  .skills {
-    display: grid;
-    padding: 1em;
-    justify-content: center;
+  .my-icons img {
+    width: 40px;
+  }
+
+  .my-icons > div {
     background-color: var(--clr-card-bg);
+    padding: 0.6em;
     border-radius: 10px;
-    grid-template-areas:
-      "top top"
-      "bottom bottom";
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   }
 
-  .card-one {
-    grid-area: top;
-    display: flex;
-    gap: 1rem;
-  }
-
-  .card-one > * {
-    flex: 1 1 auto;
-  }
-
-  .card-two {
-    grid-area: bottom;
-  }
-
-  .skills > * .icon {
-    width: 35px;
-  }
-
-  .cards {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .cols {
-    padding: 1em;
-    display: grid;
-    gap: 1rem;
-  }
-
-  .cols h2 {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    height: 10px;
-    padding-block: 1em;
-    font-size: var(--font-size-md);
-  }
-
-  .cols .text {
-    font-size: var(--font-size-xs);
-  }
-
-  .green {
-    display: block;
-    width: 12px;
-    aspect-ratio: 1 / 1;
-    border-radius: 100%;
-    background-color: var(--clr-green);
-  }
-
-  .aq {
-    background-color: var(--clr-primary);
-  }
-
-  @media (min-width: 1000px) {
-    .skills {
-      gap: 2rem;
-      grid-template-areas:
-        "top right"
-        "top right";
-    }
-
-    .card-one {
-      grid-area: top;
-      gap: 2rem;
-    }
-
-    .card-two {
-      grid-area: right;
-    }
-  }
-
-  /* What can i do for you style */
-  .box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
-    gap: 2rem;
-    @media (min-width: 850px) {
-      gap: 1rem;
-      grid-auto-rows: 200px;
-    }
-  }
-
-  .boxes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    background-color: var(--clr-card-bg);
-    width: 90%;
-    margin-inline: auto;
-    padding: 3em;
-    text-align: center;
-    position: relative;
-    border-radius: 10px;
-
-    @media (min-width: 750px) {
-      width: 100%;
-    }
-  }
-
-  .boxes > * {
-    flex: 1;
-  }
-
-  .boxes:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .boxes h3 {
-    font-family: var(--font-family-text);
-  }
-
-  .boxes p {
-    opacity: 0.8;
-    font-weight: var(--font-weight-thin);
-    font-size: var(--font-size-sm);
-    letter-spacing: 1px;
-
-    @media (min-width: 800px) {
-      font-size: var(--font-size-xs);
-    }
-  }
-
-  .boxes img {
-    width: 45px;
-    position: absolute;
-    top: -13%;
+  .my-icons > div:hover {
+    background-color: var(--clr-body-color);
   }
 
   /* Project */
+
   .project-card {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
     gap: 1rem;
   }
 
   .project-lists {
-    padding: 0.5em;
-    border-radius: 10px;
     display: grid;
-    gap: 1rem;
-    border: 1px solid var(--clr-border);
     background-color: var(--clr-card-bg);
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   }
 
   .project-lists:hover {
-    border: 1px solid var(--clr-primary);
+    background-color: var(--clr-body-color);
   }
 
-  .project-text {
-    display: grid;
-    gap: 1.5rem;
-    padding: 1em;
-  }
-
-  .project-number {
-    color: var(--clr-primary);
-    font-weight: var(--font-weight-bold);
-  }
-
-  .project-view {
-    font-size: var(--font-size-sm);
-  }
-
-  .project-view:hover {
-    color: var(--clr-primary);
-  }
-
-  /* Project Details */
-  .project-details {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: min(700px, 100%);
-    height: 100vh;
-    z-index: 9999;
-    background-color: #18181b;
-    padding: 1.5em 3em;
+  .project-flex {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 1.5rem;
-    transition: 0.3s;
-    overflow: auto;
+    gap: 1rem;
   }
 
-  .project-details.details {
-    right: 0;
-  }
-
-  .overlay2.details {
-    display: block;
-  }
-
-  .language {
-    width: 30px;
+  .project-top {
     display: flex;
     gap: 0.5rem;
   }
 
-  .text-details {
-    width: min(1000px, 100%);
-    margin-inline: auto;
+  .project-text {
     display: grid;
-    gap: 1.5rem;
-  }
-
-  .text-details h2 {
-    font-size: var(--font-size-lg);
-    color: var(--clr-light-a0);
-  }
-
-  .text-details p {
-    color: var(--clr-light-a0);
-    font-weight: 100;
-    font-size: var(--font-size-md);
-    line-height: 1.5;
-  }
-
-  .ch1 {
-    text-decoration: underline;
-    cursor: pointer;
-    color: var(--clr-primary);
-    font-size: var(--font-size-sm);
-  }
-
-  .project-img {
-    border: 1px solid var(--clr-border);
-    padding: 0.5em;
-    border-radius: 10px;
-  }
-
-  .project-links {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .project-view,
-  .project-source {
-    font-size: var(--font-size-sm);
-  }
-
-  .project-view:hover,
-  .project-source:hover {
-    color: var(--clr-primary);
-  }
-
-  /* Design Process */
-  .design {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .figma-embed {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Mobile first aspect ratio */
-
-    @media (min-width: 800px) {
-      aspect-ratio: 1 / 0.5; /* Adjust for taller desktop screen */
-      margin-inline: auto;
-    }
-  }
-
-  .figma-embed iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  /* Typography Details */
-  .typography-details {
-    background-color: #1f1f1f;
-    overflow-x: auto;
+    gap: 3rem;
     padding: 1em;
   }
 
-  .typography-details pre {
-    white-space: pre-wrap;
-    padding-block: 1em;
+  .project-number {
+    font-weight: var(--font-weight-bold);
     font-size: var(--font-size-sm);
+    color: #d1cbcb;
+  }
+
+  .project-title {
+    font-size: var(--font-size-sm);
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .project-tags > * {
+    font-size: var(--font-size-xs);
+    border: 1px solid var(--clr-border);
+    padding: 0.2em 0.5em;
+  }
+
+  .project-link {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .project-button {
+    border: 1px solid var(--clr-border);
+    padding: 0.5em;
+    color: var(--clr-light-a0);
+    font-size: var(--font-size-xs);
+    cursor: pointer;
+  }
+
+  .project-button:hover {
+    color: var(--clr-white);
   }
 
   /* Footer */
   .footer {
     display: grid;
     gap: 2rem;
-  }
-
-  .footer h2 {
-    color: var(--clr-primary);
-    font-weight: var(--font-weight-thin);
   }
 
   .footer-center {
