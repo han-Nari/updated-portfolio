@@ -281,6 +281,21 @@
     }
   }
 
+  .icon-main {
+    display: flex;
+    gap: 0.2rem;
+  }
+
+  .icon-main > div {
+    padding: 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    border-radius: 100%;
+  }
+
+  .icon-main > div > a > img {
+    width: 20px;
+  }
+
   /* Skills and Tools */
   .my-icons {
     display: flex;
@@ -304,15 +319,15 @@
   }
 
   /* Project */
-
   .project-card {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
     gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
   }
 
   .project-lists {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     background-color: var(--clr-card-bg);
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   }
@@ -334,8 +349,10 @@
 
   .project-text {
     display: grid;
+    grid-template-rows: 120px;
     gap: 3rem;
     padding: 1em;
+    overflow: hidden;
   }
 
   .project-number {
@@ -375,6 +392,12 @@
 
   .project-button:hover {
     color: var(--clr-white);
+  }
+
+  .project-intro {
+    font-size: clamp(0.8rem, 2vw, 0.8rem);
+    opacity: 0.8;
+    flex: 1;
   }
 
   /* Footer */
