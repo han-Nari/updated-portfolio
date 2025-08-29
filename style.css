@@ -300,6 +300,13 @@
     width: 20px;
   }
 
+  /* About Me */
+  .about {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+  }
+
   /* Skills and Tools */
   .my-icons {
     display: flex;
