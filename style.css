@@ -281,6 +281,12 @@
     }
   }
 
+  .aqua {
+    border: 1px solid var(--clr-primary);
+    background-color: transparent;
+    color: var(--clr-light-a0);
+  }
+
   .icon-main {
     display: flex;
     gap: 0.2rem;
@@ -299,6 +305,11 @@
 
   .icon-main > div > a > img {
     width: 20px;
+  }
+
+  .hero-links {
+    display: flex;
+    gap: 1rem;
   }
 
   /* About Me */
