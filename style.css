@@ -123,7 +123,8 @@
 
   .my-icons,
   .project-card,
-  .about {
+  .about,
+  .skills {
     padding-block: 2em;
   }
 
@@ -144,7 +145,7 @@
     }
   }
 
-  ul {
+  nav ul {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -162,7 +163,7 @@
     font-size: var(--font-size-sm);
   }
 
-  a:hover {
+  nav a:hover {
     color: var(--clr-primary);
   }
 
@@ -324,7 +325,7 @@
     line-height: 1.5;
   }
 
-  /* Skills and Tools */
+  /* Tech Stack */
   .my-icons {
     display: flex;
     flex-wrap: wrap;
@@ -431,6 +432,26 @@
     flex: 1;
   }
 
+  /* Skills */
+  .skills-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 0.8rem;
+  }
+
+  .skills-list > * {
+    border-bottom: 1px solid var(--clr-border);
+    padding: 0.4em;
+    color: var(--clr-light-a0);
+    font-size: var(--font-size-xs);
+    cursor: pointer;
+  }
+
+  .skills-list > *:hover {
+    border-bottom: 1px solid var(--clr-primary);
+  }
   /* Footer */
   .footer {
     display: grid;
