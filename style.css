@@ -373,6 +373,7 @@
 
   .project-lists:hover {
     background-color: var(--clr-body-color);
+    box-shadow: 0 0 2px 0 var(--clr-border);
   }
 
   .project-flex {
